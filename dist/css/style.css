@@ -3,7 +3,18 @@
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 
 /* Global Classes */
+body{
+	color:#fff;
+  padding-top: 5px;
+} 
 
+
+html,
+body {
+	margin: 0;
+  overflow: hidden;
+  background-attachment: fixed;
+}
 body,
 html {
   margin: 0;
