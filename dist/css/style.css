@@ -1,0 +1,155 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
+
+/* Global Classes */
+
+body,
+html {
+  margin: 0;
+  font-family: "Indie Flower";
+}
+
+/* Title */
+#title::after {
+  content: "|";
+  animation-name: cursor;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-duration: 1s;
+  margin-left: 2px;
+  font-family: monospace;
+}
+
+@keyframes cursor {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Utility Classes */
+
+.bold {
+  font-weight: bold;
+}
+.header {
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Social Links */
+
+.links {
+  padding: 1em;
+}
+.links > a {
+  text-decoration: none;
+}
+.links > a > i {
+  color: rgba(31, 30, 30, 0.933);
+  padding: 10px 10px 0px 1px;
+  transition: all 0.2s;
+}
+
+/* Referencing individual Icons */
+
+.links > a > i.fa-instagram:hover {
+  color: rgb(202, 39, 80);
+}
+.links > a > i.fa-github-square:hover {
+  color: #000000;
+}
+.links > a > i.fa-linkedin:hover {
+  color: #4875b4;
+}
+.links > a > i.fa-twitter-square:hover {
+  color: #2799be;
+}
+.links > a > i.fa-free-code-camp:hover {
+  color: #08830e;
+}
+/* 
+	Container is a div that contains other element
+	It is set to 90% of the total width
+*/
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 70%;
+  }
+}
+
+/* Card Panel is the Card type Materialized Holder for elemets */
+
+.card-panel {
+  padding: 24px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+}
+
+/* Vertical Align Code */
+
+.valign {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* Pulse Effect for the Avatar */
+
+.avatar {
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  -webkit-animation: pulse 1.5s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(0, 0, 0, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+#background {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(59, 128, 231, 0.589), white);
+  opacity: 0.3;
+}
